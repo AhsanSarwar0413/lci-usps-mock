@@ -25,7 +25,7 @@ const Routine = () => {
     }
     else {
       const fetchDatafromTextFile = async () => {
-        const responseInText = await fetch('http://localhost:5173/data/Routine.txt');
+        const responseInText = await fetch('https://usps-mock.vercel.app/data/Routine.txt');
         let responseData = await responseInText.text();
         responseData = responseData.replace('Routine Data:-', '').trim();
         responseData = JSON.parse(responseData);
