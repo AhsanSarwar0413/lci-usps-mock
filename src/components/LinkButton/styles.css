@@ -1,0 +1,12 @@
+.link-btn {
+    padding-block: 10px;
+    border-radius: 4px;
+    background-color: #4169E1;
+    color: white;
+    font-size: 0.8rem;
+    border:none;
+    cursor: pointer;
+}
+.link-btn:hover {
+    background-color: #2258f9;
+}

@@ -1,0 +1,14 @@
+.day {
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weekdays-name {
+    cursor: default;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+}

@@ -1,0 +1,12 @@
+html, * {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+.panel-navigation {
+  flex-basis: 75%;
+  padding-inline: 16px;
+}
