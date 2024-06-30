@@ -2,6 +2,7 @@
     width: 100%;
     margin-top: 4px;
 }
+
 .routine-header {
     text-align: right;
     display: flex;
@@ -9,41 +10,49 @@
     align-items: center;
     gap: 16px;
 }
-.routine-header > div {
+
+.routine-header>div {
     display: flex;
     align-items: center;
     gap: 4px;
 }
-.routine-header > div span:first-child {
+
+.routine-header>div span:first-child {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    
+
 }
-.routine-header > div:first-child span:first-child {
+
+.routine-header>div:first-child span:first-child {
     background-color: #B2D9B2;
     border: 1px solid #56AB56;
 }
-.routine-header > div:nth-child(2) span:first-child {
+
+.routine-header>div:nth-child(2) span:first-child {
     background-color: #FFFFB2;
     border: 1px solid #FFFF72;
 }
-.routine-header > div:nth-child(3) span:first-child {
+
+.routine-header>div:nth-child(3) span:first-child {
     background-color: #FFB2B2;
     border: 1px solid #FF0707;
 }
 
-.routine-header > div:nth-child(4) span:first-child {
+.routine-header>div:nth-child(4) span:first-child {
     background-color: #D9D9D9;
     border: 1px solid #B2B2B2;
 }
+
 .routine-header span {
     display: block;
-    
+
 }
+
 .routine-header span:nth-child(even) {
     font-size: 12px;
 }
+
 .routine-header span:nth-child(odd) {
     width: 8px;
     height: 8px;
@@ -52,17 +61,20 @@
     border: 1px solid black;
 }
 
-.routine-table > div{
+.routine-table>div {
     display: flex;
 }
+
 .routine-table .column {
     min-width: 200px;
     border: 1px solid black;
 }
+
 .routine-table .column ul {
     padding: 0;
     margin: 0;
 }
+
 .routine-table .column ul li {
     list-style: none;
     border-top: 1px solid black;
@@ -70,7 +82,8 @@
     min-height: 60px;
     font-size: 12px;
 }
-.routine-table .column ul li > div {
+
+.routine-table .column ul li>div {
     word-wrap: break-word;
     padding-inline: 2px;
     margin: 4px;
@@ -85,18 +98,22 @@
     padding-top: 2px;
     padding-bottom: 2px;
 }
+
 .routine-table .weekend-gray {
     background-color: #D3D3D3;
 }
+
 .routine-day {
     border-bottom: 1px solid black;
     min-height: 60px;
     font-weight: bold;
 }
+
 .routine-date {
     min-height: 60px;
     font-size: 12px;
 }
+
 .tooltip {
     display: none;
     position: absolute;
@@ -107,6 +124,7 @@
     min-width: 200px;
     font-size: 12px;
 }
+
 .routine-table .column ul li div:hover .tooltip {
     display: block;
 }

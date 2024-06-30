@@ -21,11 +21,10 @@ const CalendarDates = ({ setSelectedDate, activeDate, selectedDate }) => {
     const [periodicTaskData, setPeriodicTaskData] = useState(null);
     useEffect(() => {
         const fetchDatafromTextFile = async () => {
-            const responseInText = await fetch('http://localhost:5173/data/periodic.txt');
+            const responseInText = await fetch(`${import.meta.env.VITE_HOST}/data/periodic.txt`);
             let responseData = await responseInText.text();
             responseData = responseData.replace('Periodic Data:-', '').trim();
             responseData = JSON.parse(responseData);
-            console.log(responseData);
             setPeriodicTaskData(responseData);
         }
         fetchDatafromTextFile();

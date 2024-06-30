@@ -4,19 +4,23 @@ import './styles.css';
 
 const Adhoc = () => {
     const [adhocData, setAdhocData] = useState(null);
+    const [loading, setLoading] = useState(false);
     useEffect(() => {
         const fetchDatafromTextFile = async () => {
-            const responseInText = await fetch('https://usps-mock.vercel.app/data/ad-hoc.txt');
+            setLoading(true);
+            const responseInText = await fetch(`${import.meta.env.VITE_HOST}/data/ad-hoc.txt`);
             let responseData = await responseInText.text();
             responseData = responseData.replace('Ad-hoc Data:-', '').trim();
             responseData = JSON.parse(responseData);
             setAdhocData(responseData);
+            setLoading(false);
         }
         fetchDatafromTextFile();
+
     }, []);
     return (
         <div className="adhoc-table">
-            {adhocData !== null ? (
+            {(adhocData !== null && loading === false) ? (
                 <table>
                     <thead>
                         <tr>
@@ -44,8 +48,11 @@ const Adhoc = () => {
                         }
                     </tbody>
                 </table>
-            ) : (
-                <p>No Data Found.</p>
+            ) : (loading === true ? (
+                <p>Loading...</p>
+                ) : (
+                    <p>No Data Found.</p>
+                    )
             )}
 
         </div>

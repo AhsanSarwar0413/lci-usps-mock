@@ -25,11 +25,10 @@ const Routine = () => {
     }
     else {
       const fetchDatafromTextFile = async () => {
-        const responseInText = await fetch('https://usps-mock.vercel.app/data/Routine.txt');
+        const responseInText = await fetch(`${import.meta.env.VITE_HOST}/data/Routine.txt`);
         let responseData = await responseInText.text();
         responseData = responseData.replace('Routine Data:-', '').trim();
         responseData = JSON.parse(responseData);
-        console.log(responseData);
         setRoutineData(responseData);
       }
       fetchDatafromTextFile();
