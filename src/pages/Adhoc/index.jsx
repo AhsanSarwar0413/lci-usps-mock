@@ -6,7 +6,7 @@ const Adhoc = () => {
     const [adhocData, setAdhocData] = useState(null);
     useEffect(() => {
         const fetchDatafromTextFile = async () => {
-            const responseInText = await fetch('http://localhost:5173/data/ad-hoc.txt');
+            const responseInText = await fetch('https://usps-mock.vercel.app/data/ad-hoc.txt');
             let responseData = await responseInText.text();
             responseData = responseData.replace('Ad-hoc Data:-', '').trim();
             responseData = JSON.parse(responseData);
