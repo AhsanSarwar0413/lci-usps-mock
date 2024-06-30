@@ -1,12 +1,10 @@
 # React + Vite
 
-To Run this project use these commands: `npm install` and then `npm run dev`
+* Make sure you have Node installed on your machine.
+* The `txt` files i.e. adhoc.txt, routine.txt, and periodic.txt are located in `public/data` folder.
 
-make sure you have Node installed on your machine.
+NOTE: txt files are running through an API call and you can change the domain of the API host i.e `VITE_HOST` env variable in .env file
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* To Run this project use these commands: `npm install` and then `npm run dev`
